@@ -1,7 +1,7 @@
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import path from "node:path";
 
-export default {  
+export default {
   entry: "./src/index.js",
   output: {
     filename: "main.js",
@@ -14,11 +14,11 @@ export default {
     }),
   ],
   module: {
-    rules: [      
+    rules: [
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: "asset/resource",
-      }
+      },
     ],
   },
 };
