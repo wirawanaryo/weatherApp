@@ -1,66 +1,68 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyWeatherApp</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MyWeatherApp</title>
-</head>
-
-<body>
-  <div class="mainContainer">
-    <div class="toprow">
-      <h1 id="welcomeMsg">Pick a city to see how it`s looking outside.</h1>
-      <form id="searchForm">
-        <input type="text" placeholder="Write down the city name here, then press Enter" id="search" />
-      </form>
-    </div>
-
-    <div class="weatherDetails active">
-      <div class="mainForecast">
-        <h2 class="cityName">Jakarta</h2>
-        <div class="iconContainer"></div>
-        <p class="iconDesc">Windy</p>
-        <h1 class="temp">28°C</h1>
+  <body>
+    <div class="mainContainer">
+      <div class="toprow">
+        <h1 id="welcomeMsg">Pick a city to see how it`s looking outside.</h1>
+        <form id="searchForm">
+          <input
+            type="text"
+            placeholder="Write down the city name here, then press Enter"
+            id="search"
+          />
+        </form>
       </div>
-      <div class="additionalInfos">
-        <div class="humidity">
-          <div class="humidityIcon"></div>
-          <div class="InfoDesc">
-            <p class="infoTag">Humidity</p>
-            <h3 class="humidityVal">70%</h3>
-          </div>
+
+      <div class="weatherDetails">
+        <div class="mainForecast">
+          <h2 class="cityName">Jakarta</h2>
+          <div class="iconContainer"></div>
+          <p class="iconDesc">Windy</p>
+          <h1 class="temp">28°C</h1>
         </div>
-        <div class="rainCh">
-          <div class="rainchIcon"></div>
-          <div class="InfoDesc">
-            <p class="infoTag">Rain %</p>
-            <h3 class="rainchVal">70%</h3>
-          </div>
-        </div>
-        <div class="UVidx">
-          <div class="uvIcon"></div>
-          <div class="InfoDesc">
-            <p class="infoTag">UV Index</p>
-            <div class="valbar">
-              <div id="uvbar"></div>
+        <div class="additionalInfos">
+          <div class="humidity">
+            <div class="humidityIcon"></div>
+            <div class="InfoDesc">
+              <p class="infoTag">Humidity</p>
+              <h3 class="humidityVal">70%</h3>
             </div>
-            <h3 class="uvVal">70%</h3>
           </div>
-        </div>
-        <div class="aq">
-          <div class="aqIcon"></div>
-          <div class="InfoDesc">
-            <p class="infoTag">Air Quality</p>
-            <div class="valbar">
-              <div id="aqbar"></div>
+          <div class="rainCh">
+            <div class="rainchIcon"></div>
+            <div class="InfoDesc">
+              <p class="infoTag">Rain %</p>
+              <h3 class="rainchVal">70%</h3>
             </div>
-            <h3 class="aqVal">70%</h3>
+          </div>
+          <div class="UVidx">
+            <div class="uvIcon"></div>
+            <div class="InfoDesc">
+              <p class="infoTag">UV Index</p>
+              <div class="valbar">
+                <div id="uvbar"></div>
+              </div>
+              <h3 class="uvVal">70%</h3>
+            </div>
+          </div>
+          <div class="aq">
+            <div class="aqIcon"></div>
+            <div class="InfoDesc">
+              <p class="infoTag">Air Quality</p>
+              <div class="valbar">
+                <div id="aqbar"></div>
+              </div>
+              <h3 class="aqVal">70%</h3>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>

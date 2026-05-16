@@ -54,7 +54,9 @@ form {
 
 #search {
   margin-top: 0.2em;
-  background: rgba(0, 0, 0, 0.375) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQBJREFUeNqslI0RgyAMhdENWIEVWMEVXIGO0BW6Ah2hHcGOoCPYEewINFzBe9IA9id37w4kfEZesHHOCSYUqSPJML+RJlELDwN1pMHxMZNMkr8RTgyz2YPH5LmtwXpIHkOFmKhIlxowDmYAycKnHAHYcTCsSpXOJCie6YWDnXKLGeHLN2stGaqDsXXrX3GFcYcLrfhjtKEhffQ792gYT2nT6pJDjCw4z7ZGdGipOIqNbXIwFUARmCbKpMfYxsWJBmCEDoW7+gYUTAU2s3HJrK3AJvMLkqGHFLgWXTckm+SfSQexs+tLRqwVfgvjgMsvMAT689S5M/sk/I14kO5PAQYAuk6L1q+EdHMAAAAASUVORK5CYII=) no-repeat 14px 14px;
+  background: rgba(0, 0, 0, 0.375)
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQBJREFUeNqslI0RgyAMhdENWIEVWMEVXIGO0BW6Ah2hHcGOoCPYEewINFzBe9IA9id37w4kfEZesHHOCSYUqSPJML+RJlELDwN1pMHxMZNMkr8RTgyz2YPH5LmtwXpIHkOFmKhIlxowDmYAycKnHAHYcTCsSpXOJCie6YWDnXKLGeHLN2stGaqDsXXrX3GFcYcLrfhjtKEhffQ792gYT2nT6pJDjCw4z7ZGdGipOIqNbXIwFUARmCbKpMfYxsWJBmCEDoW7+gYUTAU2s3HJrK3AJvMLkqGHFLgWXTckm+SfSQexs+tLRqwVfgvjgMsvMAT689S5M/sk/I14kO5PAQYAuk6L1q+EdHMAAAAASUVORK5CYII=)
+    no-repeat 14px 14px;
   text-indent: 1em;
   display: inline-block;
   border: 0 none;
@@ -80,7 +82,9 @@ input[type="search"]::-webkit-search-cancel-button {
 
 #search:hover,
 #search:focus {
-  background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAT5JREFUeNqsVLtOw0AQtIMlRJHCEhUVMg398QEUSZnSfILzCXxDPsFu6XAJHWnTcS1lWsprKdmLxtKwvjVBYaTV7cm+udnX5fPb+yyBSmwhVmK/FfPZLyjUPhI8YtXYi23EOovs7PzyevAbsWeoGg5HNUHsCipX8F9TZDOstVgLPxIsxW6w3sHv6dJ2StkLbh6IPtR/AWRfSIET20H9D2U1hfaAgxY2KMagcBSmg9/rmwx0lBqTzGfHoVfVHxXgXzCjHNRHnnHke4vMGc2q0RBR0GSeCLlpLaJGFWKUszVuib32nih7iTFrjXAPyGnQ48c3Gu5AOVlMtMk6NZuf+FiC+AIhV0T+pBQ5ntXceIJKqKko2duJ2TwoLAz5QTVnagJaXWEO8y/wSMuKH9RTJoCTHyNZFidOUEfNu/8WYAAOXUT04MOtlwAAAABJRU5ErkJggg==) 14px 14px no-repeat;
+  background: #fff
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAT5JREFUeNqsVLtOw0AQtIMlRJHCEhUVMg398QEUSZnSfILzCXxDPsFu6XAJHWnTcS1lWsprKdmLxtKwvjVBYaTV7cm+udnX5fPb+yyBSmwhVmK/FfPZLyjUPhI8YtXYi23EOovs7PzyevAbsWeoGg5HNUHsCipX8F9TZDOstVgLPxIsxW6w3sHv6dJ2StkLbh6IPtR/AWRfSIET20H9D2U1hfaAgxY2KMagcBSmg9/rmwx0lBqTzGfHoVfVHxXgXzCjHNRHnnHke4vMGc2q0RBR0GSeCLlpLaJGFWKUszVuib32nih7iTFrjXAPyGnQ48c3Gu5AOVlMtMk6NZuf+FiC+AIhV0T+pBQ5ntXceIJKqKko2duJ2TwoLAz5QTVnagJaXWEO8y/wSMuKH9RTJoCTHyNZFidOUEfNu/8WYAAOXUT04MOtlwAAAABJRU5ErkJggg==)
+    14px 14px no-repeat;
 }
 
 #search:focus {
@@ -97,7 +101,7 @@ input[type="search"]::-webkit-search-cancel-button {
   justify-content: space-between;
 }
 
-.active{
+.active {
   display: flex;
 }
 
@@ -114,7 +118,18 @@ input[type="search"]::-webkit-search-cancel-button {
   flex-direction: column;
   align-items: center;
   padding: 0.2em;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 
 .additionalInfos {
@@ -131,78 +146,84 @@ input[type="search"]::-webkit-search-cancel-button {
   gap: 1em;
   padding: 1em;
   justify-content: center;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.cityName{
+.cityName {
   color: #363636;
   font-size: 2em;
 }
-.iconContainer{
-  margin: 1em 0 1em 0 ;
+.iconContainer {
+  margin: 1em 0 1em 0;
   width: 80%;
-  height: 60%;  
+  height: 60%;
   background-image: url(./assets/icon/snow-shower.png);
   background-size: contain;
   background-position: center;
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat;
 }
-.iconDesc{  
+.iconDesc {
   color: #5c5c5c;
 }
-.temp{
+.temp {
   color: #363636;
   font-size: 3em;
 }
-.humidity, .rainCh, .UVidx, .aq{
+.humidity,
+.rainCh,
+.UVidx,
+.aq {
   display: flex;
-  width:45%;
+  width: 45%;
   height: 45%;
   align-items: center;
   justify-content: space-between;
 }
-.humidityIcon, .rainchIcon, .uvIcon, .aqIcon{
+.humidityIcon,
+.rainchIcon,
+.uvIcon,
+.aqIcon {
   width: 40%;
   height: 40%;
   background-size: contain;
   background-position: center;
-  background-repeat: no-repeat;  
+  background-repeat: no-repeat;
   opacity: 0.7;
 }
-.humidityIcon{  
-  background-image:url(./assets/icon/humidity-svgrepo-com.svg) ; 
+.humidityIcon {
+  background-image: url(./assets/icon/humidity-svgrepo-com.svg);
 }
-.rainchIcon{
+.rainchIcon {
   background-image: url(./assets/icon/rain-water-svgrepo-com.svg);
 }
-.uvIcon{
+.uvIcon {
   background-image: url(./assets/icon/uv-index-alt-svgrepo-com.svg);
 }
-.aqIcon{
+.aqIcon {
   background-image: url(./assets/icon/health-svgrepo-com.svg);
 }
-.InfoDesc{
+.InfoDesc {
   width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 0.5em;  
+  gap: 0.5em;
 }
-.infoTag{
+.infoTag {
   font-size: 1.1em;
 }
-.valbar{
+.valbar {
   width: 100%;
   height: 10px;
-  background-color: #636363;
+  background-color: #969696;
   border-radius: 999px;
   overflow: hidden;
 }
-#uvbar{
+#uvbar {
   width: 20%;
   height: 100%;
   background-color: var(--good);
 }
-#aqbar{
+#aqbar {
   width: 50%;
   height: 100%;
   background-color: var(--mid);
