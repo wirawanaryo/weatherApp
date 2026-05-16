@@ -8,18 +8,35 @@ const iconContainer = document.querySelector(".iconContainer");
 const iconDesc = document.querySelector(".iconDesc");
 const temp = document.querySelector(".temp");
 
+import clearDay from '../icon/clear-day.png';
+import clearNight from '../icon/clear-night.png';
+import cloudy from '../icon/cloudy.png';
+import partlyCloudyDay from '../icon/cloudy.png';
+import partlyCloudyNight from '../icon/cloudy.png';
+import fog from '../icon/fog.png';
+import rain from '../icon/rain.png';
+import snow from '../icon/snow.png';
+import snowShower from '../icon/snow-shower.png';
+import thunderRain from '../icon/thunder-rain.png';
+import wind from '../icon/wind.png';
+
 const weatherIcons = {
-  'clear-day' : '../icon/clear-day.png',
-  'clear-night' : '../icon/clear-night.png',
-  'cloudy' : '../icon/cloudy.png',
-  'partly-cloudy-day' : '../icon/cloudy.png',
-  'partly-cloudy-night' : '../icon/cloudy.png',
-  'fog' : '../icon/fog.png',
-  'rain' : '../icon/rain.png',
-  'snow' : '../icon/snow.png',
-  'snow-shower' : '../icon/snow-shower.png',
-  'thunder-rain' : '../icon/thunder-rain.png',
-  'wind' : '../icon/wind.png'
+  'clear-day' : clearDay,
+  'clear-night' : clearNight,
+  'cloudy' : cloudy,
+  'partly-cloudy-day' : partlyCloudyDay,
+  'partly-cloudy-night' : partlyCloudyNight,
+  'fog' : fog,
+  'rain' : rain,
+  'snow' : snow,
+  'snow-shower' : snowShower,
+  'thunder-rain' : thunderRain,
+  'wind' : wind
+}
+
+function loadWeatherIcon(icon){
+  const iconURL = weatherIcons[icon];  
+  iconContainer.style.backgroundImage = `url(${iconURL})`;
 }
 
 function initButtons() {
@@ -49,7 +66,11 @@ async function loadWeatherRprt(city) {
     const iconText = data.currentConditions.icon.replaceAll("-"," ");
     const capIconText = iconText.replace(/\b\w/g, char => char.toUpperCase());
     iconDesc.textContent = capIconText ;
+
+    loadWeatherIcon(data.currentConditions.icon);
   }
 }
+
+
 
 export { initButtons, loadWeatherRprt };
