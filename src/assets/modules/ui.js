@@ -13,6 +13,7 @@ const uvVal = document.querySelector('.uvVal');
 const aqVal = document.querySelector('.aqVal');
 const uvbar = document.getElementById('uvbar');
 const aqbar = document.getElementById('aqbar');
+const errorMessage = document.getElementById("error-message");
 
 import clearDay from '../icon/clear-day.png';
 import clearNight from '../icon/clear-night.png';
@@ -94,13 +95,30 @@ function barColor(dom, val) {
   }
 }
 
+function showError(msg) {
+  errorMessage.textContent = msg;
+  errorMessage.classList.add("visible");
+  searchBar.classList.add("input-error");
+}
+
+function clearError() {
+  errorMessage.textContent = "";
+  errorMessage.classList.remove("visible");
+  searchBar.classList.remove("input-error");
+}
+
 function initButtons() {
   searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    let city = searchBar.value;
+    let city = searchBar.value.trim();
 
+    if (!city) {
+      showError("Please enter a city name.");
+      return;
+    }
+
+    clearError();
     loadWeatherRprt(city);
-
     searchBar.value = "";
   });
 }
@@ -109,8 +127,9 @@ async function loadWeatherRprt(city) {
   const data = await dat.getData(city);
 
   if (!data) {
-    alert("city not found");
+    showError("City not found. Please try again.");
   } else {
+    clearError();
     console.log(`${city} city weather data found`);
     console.dir(data, null, 2);
 

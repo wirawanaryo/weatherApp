@@ -5,6 +5,7 @@
   --fine: #feff5c;
   --good: #c0ff33;
 }
+
 /* @font-face {
   font-family: "logoFont";
   src: url(./assets/font/Cotton\ Candies.ttf);
@@ -54,9 +55,7 @@ form {
 
 #search {
   margin-top: 0.2em;
-  background: rgba(0, 0, 0, 0.375)
-    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQBJREFUeNqslI0RgyAMhdENWIEVWMEVXIGO0BW6Ah2hHcGOoCPYEewINFzBe9IA9id37w4kfEZesHHOCSYUqSPJML+RJlELDwN1pMHxMZNMkr8RTgyz2YPH5LmtwXpIHkOFmKhIlxowDmYAycKnHAHYcTCsSpXOJCie6YWDnXKLGeHLN2stGaqDsXXrX3GFcYcLrfhjtKEhffQ792gYT2nT6pJDjCw4z7ZGdGipOIqNbXIwFUARmCbKpMfYxsWJBmCEDoW7+gYUTAU2s3HJrK3AJvMLkqGHFLgWXTckm+SfSQexs+tLRqwVfgvjgMsvMAT689S5M/sk/I14kO5PAQYAuk6L1q+EdHMAAAAASUVORK5CYII=)
-    no-repeat 14px 14px;
+  background: rgba(0, 0, 0, 0.375) url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQBJREFUeNqslI0RgyAMhdENWIEVWMEVXIGO0BW6Ah2hHcGOoCPYEewINFzBe9IA9id37w4kfEZesHHOCSYUqSPJML+RJlELDwN1pMHxMZNMkr8RTgyz2YPH5LmtwXpIHkOFmKhIlxowDmYAycKnHAHYcTCsSpXOJCie6YWDnXKLGeHLN2stGaqDsXXrX3GFcYcLrfhjtKEhffQ792gYT2nT6pJDjCw4z7ZGdGipOIqNbXIwFUARmCbKpMfYxsWJBmCEDoW7+gYUTAU2s3HJrK3AJvMLkqGHFLgWXTckm+SfSQexs+tLRqwVfgvjgMsvMAT689S5M/sk/I14kO5PAQYAuk6L1q+EdHMAAAAASUVORK5CYII=) no-repeat 14px 14px;
   text-indent: 1em;
   display: inline-block;
   border: 0 none;
@@ -82,9 +81,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 #search:hover,
 #search:focus {
-  background: #fff
-    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAT5JREFUeNqsVLtOw0AQtIMlRJHCEhUVMg398QEUSZnSfILzCXxDPsFu6XAJHWnTcS1lWsprKdmLxtKwvjVBYaTV7cm+udnX5fPb+yyBSmwhVmK/FfPZLyjUPhI8YtXYi23EOovs7PzyevAbsWeoGg5HNUHsCipX8F9TZDOstVgLPxIsxW6w3sHv6dJ2StkLbh6IPtR/AWRfSIET20H9D2U1hfaAgxY2KMagcBSmg9/rmwx0lBqTzGfHoVfVHxXgXzCjHNRHnnHke4vMGc2q0RBR0GSeCLlpLaJGFWKUszVuib32nih7iTFrjXAPyGnQ48c3Gu5AOVlMtMk6NZuf+FiC+AIhV0T+pBQ5ntXceIJKqKko2duJ2TwoLAz5QTVnagJaXWEO8y/wSMuKH9RTJoCTHyNZFidOUEfNu/8WYAAOXUT04MOtlwAAAABJRU5ErkJggg==)
-    14px 14px no-repeat;
+  background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAT5JREFUeNqsVLtOw0AQtIMlRJHCEhUVMg398QEUSZnSfILzCXxDPsFu6XAJHWnTcS1lWsprKdmLxtKwvjVBYaTV7cm+udnX5fPb+yyBSmwhVmK/FfPZLyjUPhI8YtXYi23EOovs7PzyevAbsWeoGg5HNUHsCipX8F9TZDOstVgLPxIsxW6w3sHv6dJ2StkLbh6IPtR/AWRfSIET20H9D2U1hfaAgxY2KMagcBSmg9/rmwx0lBqTzGfHoVfVHxXgXzCjHNRHnnHke4vMGc2q0RBR0GSeCLlpLaJGFWKUszVuib32nih7iTFrjXAPyGnQ48c3Gu5AOVlMtMk6NZuf+FiC+AIhV0T+pBQ5ntXceIJKqKko2duJ2TwoLAz5QTVnagJaXWEO8y/wSMuKH9RTJoCTHyNZFidOUEfNu/8WYAAOXUT04MOtlwAAAABJRU5ErkJggg==) 14px 14px no-repeat;
 }
 
 #search:focus {
@@ -153,6 +150,7 @@ input[type="search"]::-webkit-search-cancel-button {
   color: #363636;
   font-size: 2em;
 }
+
 .iconContainer {
   margin: 1em 0 1em 0;
   width: 80%;
@@ -162,13 +160,16 @@ input[type="search"]::-webkit-search-cancel-button {
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .iconDesc {
   color: #5c5c5c;
 }
+
 .temp {
   color: #363636;
   font-size: 3em;
 }
+
 .humidity,
 .rainCh,
 .UVidx,
@@ -179,6 +180,7 @@ input[type="search"]::-webkit-search-cancel-button {
   align-items: center;
   justify-content: space-between;
 }
+
 .humidityIcon,
 .rainchIcon,
 .uvIcon,
@@ -190,27 +192,34 @@ input[type="search"]::-webkit-search-cancel-button {
   background-repeat: no-repeat;
   opacity: 0.7;
 }
+
 .humidityIcon {
   background-image: url(./assets/icon/humidity-svgrepo-com.svg);
 }
+
 .rainchIcon {
   background-image: url(./assets/icon/rain-water-svgrepo-com.svg);
 }
+
 .uvIcon {
   background-image: url(./assets/icon/uv-index-alt-svgrepo-com.svg);
 }
+
 .aqIcon {
   background-image: url(./assets/icon/health-svgrepo-com.svg);
 }
+
 .InfoDesc {
   width: 50%;
   display: flex;
   flex-direction: column;
   gap: 0.5em;
 }
+
 .infoTag {
   font-size: 1.1em;
 }
+
 .valbar {
   width: 100%;
   height: 10px;
@@ -218,13 +227,35 @@ input[type="search"]::-webkit-search-cancel-button {
   border-radius: 999px;
   overflow: hidden;
 }
+
 #uvbar {
   width: 20%;
   height: 100%;
   background-color: var(--good);
 }
+
 #aqbar {
   width: 50%;
   height: 100%;
   background-color: var(--mid);
+}
+
+
+/* error msg validation */
+.error-message {
+  display: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  color: #9F6000;
+  background-color: #FEEFB3;
+  background-image: url('https://i.imgur.com/Z8q7ww7.png');
+  border: 1px solid;
+  margin: 10px 0px;
+  padding: 15px 10px 15px 50px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+}
+
+.error-message.visible {
+  display: block;
 }
