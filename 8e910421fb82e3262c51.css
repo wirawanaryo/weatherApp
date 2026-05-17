@@ -1,0 +1,307 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --dangerous: #fb4b4b;
+  --bad: #ffa879;
+  --mid: #ffc163;
+  --fine: #feff5c;
+  --good: #c0ff33;
+}
+/* @font-face {
+  font-family: "logoFont";
+  src: url(./assets/font/Cotton\ Candies.ttf);
+} */
+
+body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url(52111e0a01023e10350f.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.toprow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#welcomeMsg {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5c5c5c;
+}
+
+form {
+  /* form doesnt effect styling, like it doesnt exist in the layout */
+  display: contents;
+}
+
+#search {
+  margin-top: 0.2em;
+  background: rgba(0, 0, 0, 0.375)
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQBJREFUeNqslI0RgyAMhdENWIEVWMEVXIGO0BW6Ah2hHcGOoCPYEewINFzBe9IA9id37w4kfEZesHHOCSYUqSPJML+RJlELDwN1pMHxMZNMkr8RTgyz2YPH5LmtwXpIHkOFmKhIlxowDmYAycKnHAHYcTCsSpXOJCie6YWDnXKLGeHLN2stGaqDsXXrX3GFcYcLrfhjtKEhffQ792gYT2nT6pJDjCw4z7ZGdGipOIqNbXIwFUARmCbKpMfYxsWJBmCEDoW7+gYUTAU2s3HJrK3AJvMLkqGHFLgWXTckm+SfSQexs+tLRqwVfgvjgMsvMAT689S5M/sk/I14kO5PAQYAuk6L1q+EdHMAAAAASUVORK5CYII=)
+    no-repeat 14px 14px;
+  text-indent: 1em;
+  display: inline-block;
+  border: 0 none;
+  width: 0;
+  height: 3em;
+  border-radius: 3em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  outline: none;
+  padding: 1em 1.5em;
+  cursor: pointer;
+  -webkit-appearance: none;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #999;
+  vertical-align: baseline;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+#search:hover,
+#search:focus {
+  background: #fff
+    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAYAAABvVQZ0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAT5JREFUeNqsVLtOw0AQtIMlRJHCEhUVMg398QEUSZnSfILzCXxDPsFu6XAJHWnTcS1lWsprKdmLxtKwvjVBYaTV7cm+udnX5fPb+yyBSmwhVmK/FfPZLyjUPhI8YtXYi23EOovs7PzyevAbsWeoGg5HNUHsCipX8F9TZDOstVgLPxIsxW6w3sHv6dJ2StkLbh6IPtR/AWRfSIET20H9D2U1hfaAgxY2KMagcBSmg9/rmwx0lBqTzGfHoVfVHxXgXzCjHNRHnnHke4vMGc2q0RBR0GSeCLlpLaJGFWKUszVuib32nih7iTFrjXAPyGnQ48c3Gu5AOVlMtMk6NZuf+FiC+AIhV0T+pBQ5ntXceIJKqKko2duJ2TwoLAz5QTVnagJaXWEO8y/wSMuKH9RTJoCTHyNZFidOUEfNu/8WYAAOXUT04MOtlwAAAABJRU5ErkJggg==)
+    14px 14px no-repeat;
+}
+
+#search:focus {
+  width: 100px;
+  cursor: text;
+  flex-basis: 85%;
+}
+
+.weatherDetails {
+  margin-top: 2em;
+  width: 100%;
+  height: 40vh;
+  display: none;
+  justify-content: space-between;
+}
+
+.active {
+  display: flex;
+}
+
+.mainForecast {
+  width: 40%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.2em;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+.additionalInfos {
+  width: 58%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  padding: 1em;
+  justify-content: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.cityName {
+  color: #363636;
+  font-size: 2em;
+}
+.iconContainer {
+  margin: 1em 0 1em 0;
+  width: 80%;
+  height: 60%;
+  background-image: url(9cab642c461cd57c6724.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.iconDesc {
+  color: #5c5c5c;
+}
+.temp {
+  color: #363636;
+  font-size: 3em;
+}
+.humidity,
+.rainCh,
+.UVidx,
+.aq {
+  display: flex;
+  width: 45%;
+  height: 45%;
+  align-items: center;
+  justify-content: space-between;
+}
+.humidityIcon,
+.rainchIcon,
+.uvIcon,
+.aqIcon {
+  width: 40%;
+  height: 40%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+.humidityIcon {
+  background-image: url(2e53a36a1156d4bfd58f.svg);
+}
+.rainchIcon {
+  background-image: url(9d7c0339ffd9ad58316c.svg);
+}
+.uvIcon {
+  background-image: url(9a4f15383697dbce83ea.svg);
+}
+.aqIcon {
+  background-image: url(3b18e0a4589621229464.svg);
+}
+.InfoDesc {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.infoTag {
+  font-size: 1.1em;
+}
+.valbar {
+  width: 100%;
+  height: 10px;
+  background-color: #969696;
+  border-radius: 999px;
+  overflow: hidden;
+}
+#uvbar {
+  width: 20%;
+  height: 100%;
+  background-color: var(--good);
+}
+#aqbar {
+  width: 50%;
+  height: 100%;
+  background-color: var(--mid);
+}
+
