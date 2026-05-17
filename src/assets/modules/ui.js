@@ -7,6 +7,12 @@ const cityName = document.querySelector(".cityName");
 const iconContainer = document.querySelector(".iconContainer");
 const iconDesc = document.querySelector(".iconDesc");
 const temp = document.querySelector(".temp");
+const humidityVal = document.querySelector('.humidityVal');
+const rainchVal = document.querySelector('.rainchVal');
+const uvVal = document.querySelector('.uvVal');
+const aqVal = document.querySelector('.aqVal');
+const uvbar = document.getElementById('uvbar');
+const aqbar = document.getElementById('aqbar');
 
 import clearDay from '../icon/clear-day.png';
 import clearNight from '../icon/clear-night.png';
@@ -39,6 +45,55 @@ function loadWeatherIcon(icon){
   iconContainer.style.backgroundImage = `url(${iconURL})`;
 }
 
+function loadWeatherDetails(data) {
+  humidityVal.textContent = `${data.currentConditions.humidity}%`;
+  aqVal.textContent = `${data.currentConditions.aqius}`;
+  barWidth(aqbar, data.currentConditions.aqius, 500);  
+  uvVal.textContent = `${data.currentConditions.uvindex}`;
+  barWidth(uvbar, data.currentConditions.uvindex, 12);
+
+  if (data.currentConditions.precip) {
+    rainchVal.textContent = `${data.currentConditions.precip}mm`;
+  } else {
+    rainchVal.textContent = '--';
+  } 
+}
+
+function barWidth(dom, val, maxval) {
+  if (val === 0) {
+    dom.style.width = `0%`;
+    return;
+  }
+  let prctg = (val/maxval)*100;  
+  dom.style.width = `${prctg}%`;
+
+  barColor(dom,prctg)
+  console.log(prctg);
+}
+
+function barColor(dom, val) {
+  switch (true) {
+    case (val<= 100 && val >= 81):
+      dom.style.backgroundColor = 'var(--dangerous)';
+      break;
+    case (val<= 80 && val >= 61):
+      dom.style.backgroundColor = 'var(--bad)';
+      break;
+    case (val<= 60 && val >= 41):
+      dom.style.backgroundColor = 'var(--mid)';
+      break;
+    case (val<= 40 && val >= 21):
+      dom.style.backgroundColor = 'var(--fine)';
+      break;
+    case (val<= 20 && val >= 0):
+      dom.style.backgroundColor = 'var(--good)';
+      break;  
+    default:
+      dom.style.backgroundColor = 'var(--good)';
+      break;
+  }
+}
+
 function initButtons() {
   searchForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -68,6 +123,7 @@ async function loadWeatherRprt(city) {
     iconDesc.textContent = capIconText ;
 
     loadWeatherIcon(data.currentConditions.icon);
+    loadWeatherDetails(data);
   }
 }
 

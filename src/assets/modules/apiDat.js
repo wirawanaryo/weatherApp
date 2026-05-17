@@ -9,7 +9,7 @@ async function getData(city) {
 
   const url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}
 ?unitGroup=metric
-&elements=datetime,temp,humidity,precip,uvindex,aqius,icon
+&elements=datetime,temp,humidity,precip,uvindex,aqius,icon,precipprob
 &key=AXDE6V5ELGREC85KVTJ52UK8L
 &contentType=json`;
 
